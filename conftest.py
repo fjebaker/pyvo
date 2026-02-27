@@ -8,6 +8,11 @@ import tempfile
 import numpy as np
 from astropy.utils import minversion
 
+import socket
+
+print(">>>>>>>>>>>>>>>", socket.gethostbyaddr("localhost"))
+print(">>>>>>>>>>>>>>>", socket.gethostbyaddr("127.0.0.1"))
+
 try:
     from pytest_astropy_header.display import PYTEST_HEADER_MODULES, TESTED_VERSIONS
     ASTROPY_HEADER = True
