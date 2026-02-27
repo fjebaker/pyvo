@@ -1420,7 +1420,7 @@ class SAMPHubServer:
 
         if response:
             register_map = self._perform_standard_register()
-            translator_url = "http://localhost:{}/translator/{}?ref=".format(
+            translator_url = "http://127.0.0.1:{}/translator/{}?ref=".format(
                 self._web_port, register_map["samp.private-key"]
             )
             register_map["samp.url-translator"] = translator_url
