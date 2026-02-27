@@ -286,7 +286,7 @@ class SAMPHubServer:
 
         try:
             self._web_profile_server = WebProfileXMLRPCServer(
-                ("localhost", self._web_port), log, logRequests=False, allow_none=True
+                ("127.0.0.1", self._web_port), log, logRequests=False, allow_none=True
             )
             self._web_port = self._web_profile_server.socket.getsockname()[1]
             self._web_profile_server.register_introspection_functions()
